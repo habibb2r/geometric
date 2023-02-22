@@ -1,0 +1,24 @@
+.navigation-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+    padding: 10px 20px;
+    background: rgba(16, 144, 216, 0.1);
+    border-radius: 8px;
+}
+.geometric-cal{
+    margin: 20px 50px;
+    padding: 10px 0;
+}
+
+.qna-tittle{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+.qna{
+    margin: 50px;
+    padding: 0 50px;
+}

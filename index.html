@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link rel="stylesheet" href="style.css">    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="navigation-bar">
+        <div>
+            <h2 class="text-2xl font-semibold">Interactive</h2>
+            <p class="text-xl">Geometry Genius</p>
+        </div>
+        <button id="blog-btn" onclick="location.href='blog.html'" class="btn-primary py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md">Blog</button>
+
+    </section>
+
+    <section class="geometric-cal flex flex-col gap-4 md:flex-row">
+        <div class="w-auto grid grid-cols-1 gap-4 carr md:w-3/4 md:grid-cols-3">
+
+          <!-- Triangle Section -->
+
+            <div  class="flex justify-center text-center">
+                <div onmouseover="randomColor(this)" id="divID" class=" flex flex-col gap-3 justify-center max-w-sm pt-8 px-8 rounded-lg shadow-lg">
+                  <img class="h-40 px-8" src="images/triangle.png" alt=""/>
+                  <div class="p-6 flex flex-col justify-center">
+                    <h5 id="triName" class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
+                    <p class="text-gray-700 text-base mb-4"> Area (A) = 0.5 x b x h </p>
+                    <div class="gap-2 flex flex-row py-3">
+                        <input id="triFirst" class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="b" type="text"><span> cm </span>
+                        <input id="triSecound" class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="h" type="text"> <span> cm </span>
+                    </div>
+                    <button id="triCalcu" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white  text-lg leading-tight font-semibold rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rectangle Section -->
+
+              <div class="flex justify-center text-center">
+                <div onmouseover="randomColor(this)" class="bg-white flex flex-col gap-3 justify-center max-w-sm pt-8 px-8 rounded-lg shadow-lg">
+                  <img class="h-40 px-8" src="images/rectangle.png" alt=""/>
+                  <div class="p-6 flex flex-col justify-center">
+                    <h5 id="racName" class="text-gray-900 text-xl font-medium mb-2">Rectangle</h5>
+                    <p class="text-gray-700 text-base mb-4"> Area (A) = w x l </p>
+                    <div class="gap-2 flex flex-row py-3">
+                        <input id="recW" class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="w" type="text"><span> cm </span>
+                        <input id="recl" class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="l" type="text"> <span> cm </span>
+                    </div>
+                    <button id="recCalcu" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white  text-lg leading-tight font-semibold rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Parallelogram Section-->
+              <div class="flex justify-center text-center">
+                <div onmouseover="randomColor(this)" class="bg-white flex flex-col gap-3 justify-center max-w-sm pt-8 px-8 rounded-lg shadow-lg">
+                  <img class="h-40 px-8" src="images/parallelogram.png" alt=""/>
+                  <div class="p-6 flex flex-col justify-center">
+                    <h5 id="parName" class="text-gray-900 text-xl font-medium mb-2">Parallelogram</h5>
+                    <p class="text-gray-700 text-base mb-4"> Area (A) = b x h </p>
+                    <div class="gap-2 flex flex-row py-3">
+                        <input id="parB" class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="b" type="text"><span> cm </span>
+                        <input id="parH" class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="h" type="text"> <span> cm </span>
+                    </div>
+                    <button id="parelCalcu" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white  text-lg leading-tight font-semibold rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rhombus Section -->
+
+              <div class="flex justify-center text-center">
+                <div onmouseover="randomColor(this)" class="bg-white flex flex-col gap-3 justify-center max-w-sm pt-8 px-8 rounded-lg shadow-lg">
+                  <img class="h-40 px-8" src="images/rhombus.png" alt=""/>
+                  <div class="p-6 flex flex-col justify-center">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Rhombus</h5>
+                    <p class="text-gray-700 text-base mb-4"> Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                    <div class="gap-2 flex flex-row py-3">
+                        <input class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="d 1" type="text"><span> cm </span>
+                        <input class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="d 2" type="text"><span> cm </span>
+                    </div>
+                    <button id="romCalcu" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white  text-lg leading-tight font-semibold rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pentagon -->
+
+              <div class="flex justify-center text-center">
+                <div onmouseover="randomColor(this)" class="bg-white flex flex-col gap-3 justify-center max-w-sm pt-8 px-8 rounded-lg shadow-lg">
+                  <img class="h-40 px-8" src="images/pentagon.png" alt=""/>
+                  <div class="p-6 flex flex-col justify-center">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Pentagon</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                        Area (A) = 0.5 x p x b
+                    </p>
+                    <div class="gap-2 flex flex-row py-3">
+                        <input class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="p" type="text"><span> cm </span>
+                        <input class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="b" type="text"> <span> cm </span>
+                    </div>
+                    <button id="penCalcu" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white  text-lg leading-tight font-semibold rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ellipse section -->
+
+              <div class="flex justify-center text-center">
+                <div onmouseover="randomColor(this)" class="bg-white flex flex-col gap-3 justify-center max-w-sm pt-8 px-8 rounded-lg shadow-lg">
+                  <img class="h-40 px-8" src="images/ellipse.png" alt=""/>
+                  <div class="p-6 flex flex-col justify-center">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Ellipse</h5>
+                    <p class="text-gray-700 text-base mb-4"> Area (A) = πab</p>
+                    <div class="gap-2 flex flex-row py-3">
+                        <input class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="a" type="text" onfocus="clearThis(this)"><span> cm </span>
+                        <input class=" px-3 rounded-md border-2 border-gray-400 w-2/4 border-2 border-gray-400" placeholder="b" type="text" onfocus="clearThis(this)"> <span> cm </span>
+                    </div>
+                    <button id="ellCalcu" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white  text-lg leading-tight font-semibold rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+        <!-- Area Section -->
+        <div class="overflow-x-auto w-auto border-2 border-rose-500 border-solid text-center rounded px-2 md:w-1/4">
+            <h2 class="text-center underline mb-4 text-xl font-semibold">Area Calculation</h2>
+            <table class="table w-full">
+                <tbody id="table-container" class="gap-4">
+                      <tr>
+                          <th></th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>  
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
